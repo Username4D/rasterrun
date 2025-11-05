@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl7uumbime3mk"]
+
+[ext_resource type="Script" uid="uid://cra6mwlhwevg5" path="res://scripts/player.gd" id="1_3vyb7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_u8vuu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3vyb7"]
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_3vyb7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_u8vuu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_3vyb7")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, 0.75)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.9238795, 0.14644665, -0.3535534, 0, 0.9238795, 0.38268346, 0.3826835, 0.3535534, -0.85355335, -4, 4, -8)
