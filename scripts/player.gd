@@ -3,6 +3,7 @@ extends CharacterBody3D
 var movement_direction = Vector3(0,0,1)
 var speed = 280
 var movement_rotation = 0
+var input_disabled = false
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_up"):
@@ -20,10 +21,19 @@ func _input(event: InputEvent) -> void:
 	
 	$front.rotation_degrees.y = movement_rotation + 90
 func _physics_process(delta: float) -> void:
-	velocity = movement_direction * speed * delta
+	if not input_disabled:
+		velocity = movement_direction * speed * delta
+	else:
+		velocity.x = move_toward(velocity.x , 0, delta * 4)
+		velocity.z = move_toward(velocity.z , 0, delta * 4)
+	velocity.y = clamp(velocity.y - 0.2, -30, 3)
 	self.move_and_slide()
+	
+	if position.y <= 0.98:
+		input_disabled = true
+		$Camera3D.global_position.y = 5
 
-
+	
 func _on_front_body_entered(body: Node3D) -> void:
 	if body.is_in_group("collidable"):
 		self.speed = 0
