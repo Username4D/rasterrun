@@ -7,7 +7,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_3vyb7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g2els"]
-size = Vector3(1, 1, 0.05)
+size = Vector3(1.05, 1, 1.05)
 
 [node name="player" type="CharacterBody3D"]
 script = ExtResource("1_3vyb7")
@@ -21,7 +21,7 @@ shape = SubResource("BoxShape3D_3vyb7")
 [node name="front" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="front"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.525)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.018969655)
 shape = SubResource("BoxShape3D_g2els")
 
 [node name="Camera3D" type="Camera3D" parent="."]
