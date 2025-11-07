@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dufstaynulvg5"]
+
+[ext_resource type="Script" uid="uid://517qvalb32kl" path="res://scripts/pulse_wall.gd" id="1_nb0jv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mbs4g"]
+size = Vector3(0.9, 1, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ry18k"]
+
+[node name="pulse_wall" type="AnimatableBody3D" groups=["collidable"]]
+script = ExtResource("1_nb0jv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_mbs4g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9, 0, 0, 0, 1, 0, 0, 0, 0.9, 0, 0, 0)
+mesh = SubResource("BoxMesh_ry18k")
+
+[node name="move_timer" type="Timer" parent="." groups=["collidable"]]
+wait_time = 4.0
+autostart = true
