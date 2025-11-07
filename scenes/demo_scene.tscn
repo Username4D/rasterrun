@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqf1pye3c1kvl"]
+[gd_scene load_steps=10 format=3 uid="uid://cqf1pye3c1kvl"]
 
 [ext_resource type="Texture2D" uid="uid://ca0rwtwcwd4yh" path="res://assets/placeholder_texture.png" id="1_03k34"]
 [ext_resource type="PackedScene" uid="uid://bl7uumbime3mk" path="res://scenes/player.tscn" id="2_ba4t3"]
+[ext_resource type="PackedScene" uid="uid://ch3gpdhfoyjbm" path="res://scenes/wall.tscn" id="3_0ekuu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ba4t3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -45,3 +46,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_blhf0")
 
 [node name="player" parent="StaticBody3D" instance=ExtResource("2_ba4t3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4107857, 1, 5.3870583)
+
+[node name="wall" parent="StaticBody3D" instance=ExtResource("3_0ekuu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4468706, 1, -0.32570577)
+
+[node name="wall2" parent="StaticBody3D" instance=ExtResource("3_0ekuu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4468706, 1, -0.32570577)
+
+[node name="wall3" parent="StaticBody3D" instance=ExtResource("3_0ekuu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
