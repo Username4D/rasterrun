@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cqf1pye3c1kvl"]
+[gd_scene load_steps=14 format=3 uid="uid://cqf1pye3c1kvl"]
 
 [ext_resource type="Texture2D" uid="uid://ca0rwtwcwd4yh" path="res://assets/placeholder_texture.png" id="1_03k34"]
 [ext_resource type="PackedScene" uid="uid://bl7uumbime3mk" path="res://scenes/player.tscn" id="2_ba4t3"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dufstaynulvg5" path="res://scenes/pulse_wall.tscn" id="4_8m1ix"]
 [ext_resource type="PackedScene" uid="uid://b77hpbyp824ng" path="res://scenes/spinner.tscn" id="5_bk2b3"]
 [ext_resource type="PackedScene" uid="uid://bq334buxcf7ff" path="res://scenes/spinner_wall.tscn" id="6_64dih"]
+[ext_resource type="PackedScene" uid="uid://clh8jtbrdus8o" path="res://scenes/spike.tscn" id="7_blhf0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ba4t3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -95,3 +96,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, -1)
 
 [node name="spinner2" parent="." instance=ExtResource("6_64dih")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -9)
+
+[node name="spike" parent="." instance=ExtResource("7_blhf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1, -14)
+
+[node name="spike2" parent="." instance=ExtResource("7_blhf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1, -12)
+
+[node name="spike3" parent="." instance=ExtResource("7_blhf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 6)
