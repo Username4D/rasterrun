@@ -8,10 +8,15 @@ var one = [preload("res://scenes/floors/1/0.tscn")]
 
 var rng = RandomNumberGenerator.new()
 
+var current_index = 0
+
 func _ready() -> void:
 	rng.randomize()
+	await spawn_new()
+	await spawn_new()
+	await spawn_new()
 	
-func spawn_new():
+func spawn_new(anim = true):
 	var possible = [mi_one, zero, one]
 	for i in self.get_children():
 		if round(last.position+ Vector3(last.next.x * -1, 0, last.next.y).rotated(Vector3 (0,01,0), last.rotation.y) * 11 + Vector3(11, 0, 0).rotated(Vector3 (0,01,0), last.rotation.y - 0.5 * PI * last.next.x)) == round(i.position):
@@ -23,6 +28,8 @@ func spawn_new():
 		if round(last.position+ Vector3(last.next.x * -1, 0, last.next.y).rotated(Vector3 (0,01,0), last.rotation.y) * 11 + Vector3(0, 00, 11).rotated(Vector3 (0,01,0), last.rotation.y- 0.5 * PI * last.next.x)) == round(i.position):
 			print("no_front")
 			possible.erase(zero)
+		if i.index < current_index - 5:
+			i.despawn()
 	
 	var next_arr
 	if len(possible) != 0:
@@ -38,7 +45,7 @@ func spawn_new():
 		new.rotation_degrees.y = roundi(last.rotation_degrees.y) + -90 * last.next.x 
 		self.add_child(new)
 		last = new
-
-func _process(delta: float) -> void:
-	$MeshInstance3D.position = round(last.position+ Vector3(last.next.x * -1, 0, last.next.y).rotated(Vector3 (0,01,0), last.rotation.y) * 11)
-	$MeshInstance3D.rotation.y =  last.rotation.y - 0.5 * PI * last.next.x
+		new.index = current_index
+		if anim:
+			new.spawn()
+	current_index += 1

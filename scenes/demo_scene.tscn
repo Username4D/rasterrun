@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqf1pye3c1kvl"]
+[gd_scene load_steps=7 format=3 uid="uid://cqf1pye3c1kvl"]
 
 [ext_resource type="PackedScene" uid="uid://cqniu86ehuq6y" path="res://scenes/floor.tscn" id="2_0ekuu"]
 [ext_resource type="Script" uid="uid://bp6r7shwy5ruv" path="res://scenes/floors.gd" id="2_8m1ix"]
@@ -28,9 +28,6 @@ fog_light_color = Color(1.5792903e-08, 0.039755587, 0.039755557, 1)
 fog_density = 0.0
 fog_sky_affect = 0.97
 
-[sub_resource type="PrismMesh" id="PrismMesh_0ekuu"]
-size = Vector3(4.025, 1.94, 3.59)
-
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -49,7 +46,3 @@ script = ExtResource("2_8m1ix")
 
 [node name="floor" parent="floors" instance=ExtResource("2_0ekuu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 1)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="floors"]
-transform = Transform3D(1, 0, 0, 0, -0.05233594, -0.9986295, 0, 0.9986295, -0.05233594, 0, 0, 0)
-mesh = SubResource("PrismMesh_0ekuu")
