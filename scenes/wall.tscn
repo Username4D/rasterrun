@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch3gpdhfoyjbm"]
+[gd_scene load_steps=5 format=3 uid="uid://ch3gpdhfoyjbm"]
 
+[ext_resource type="Script" uid="uid://b3w4mpqhbrn44" path="res://scripts/wall.gd" id="1_2ktk7"]
 [ext_resource type="Material" uid="uid://bdfydinqsh5mt" path="res://resources/wall.tres" id="1_wykyb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_uvhfp"]
+resource_local_to_scene = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wykyb"]
+resource_local_to_scene = true
 
 [node name="wall" type="StaticBody3D" groups=["collidable"]]
+script = ExtResource("1_2ktk7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_uvhfp")
