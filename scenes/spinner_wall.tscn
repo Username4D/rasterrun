@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bq334buxcf7ff"]
+[gd_scene load_steps=7 format=3 uid="uid://bq334buxcf7ff"]
 
 [ext_resource type="Script" uid="uid://cawyubfjv84jf" path="res://scripts/spinner.gd" id="1_tpvwv"]
+[ext_resource type="Material" uid="uid://pd5qgs33haie" path="res://resources/blue_wall.tres" id="2_v6n2a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_78gc6"]
 size = Vector3(0.25, 1, 5)
@@ -28,10 +29,12 @@ shape = SubResource("CylinderShape3D_tpvwv")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
 mesh = SubResource("BoxMesh_kry60")
+surface_material_override/0 = ExtResource("2_v6n2a")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
 mesh = SubResource("CylinderMesh_v6n2a")
+surface_material_override/0 = ExtResource("2_v6n2a")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0

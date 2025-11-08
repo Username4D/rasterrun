@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ch3gpdhfoyjbm"]
+[gd_scene load_steps=4 format=3 uid="uid://ch3gpdhfoyjbm"]
+
+[ext_resource type="Material" uid="uid://bdfydinqsh5mt" path="res://resources/wall.tres" id="1_wykyb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_uvhfp"]
 
@@ -8,6 +10,8 @@
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_uvhfp")
+surface_material_override/0 = ExtResource("1_wykyb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
 shape = SubResource("BoxShape3D_wykyb")
