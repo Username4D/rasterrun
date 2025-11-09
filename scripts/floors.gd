@@ -3,7 +3,7 @@ extends Node3D
 @onready var last = self.get_child(0)
 
 var mi_one = [preload("res://scenes/floors/-1/0.tscn"), preload("res://scenes/floors/-1/1.tscn"), preload("res://scenes/floors/-1/2.tscn"), preload("res://scenes/floors/-1/3.tscn"), preload("res://scenes/floors/-1/4.tscn"), preload("res://scenes/floors/-1/5.tscn")]
-var zero = [preload("res://scenes/floors/0/0.tscn"), preload("res://scenes/floors/0/1.tscn"), preload("res://scenes/floors/0/2.tscn"), preload("res://scenes/floors/0/3.tscn"), preload("res://scenes/floors/0/4.tscn"), preload("res://scenes/floors/0/5.tscn"), preload("res://scenes/floors/0/6.tscn")]
+var zero = [preload("res://scenes/floors/0/0.tscn"), preload("res://scenes/floors/0/1.tscn"), preload("res://scenes/floors/0/2.tscn"), preload("res://scenes/floors/0/3.tscn"), preload("res://scenes/floors/0/4.tscn"), preload("res://scenes/floors/0/5.tscn"), preload("res://scenes/floors/0/6.tscn"), preload("res://scenes/floors/0/7.tscn")]
 var one = [preload("res://scenes/floors/1/0.tscn"), preload("res://scenes/floors/1/1.tscn"), preload("res://scenes/floors/1/2.tscn"), preload("res://scenes/floors/1/3.tscn"), preload("res://scenes/floors/1/4.tscn"), preload("res://scenes/floors/1/5.tscn")]
 
 var rng = RandomNumberGenerator.new()
