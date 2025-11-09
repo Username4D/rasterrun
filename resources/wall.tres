@@ -7,7 +7,7 @@
 render_priority = 0
 shader = ExtResource("2_wrb2w")
 shader_parameter/color = Color(0.8277864, 1, 1, 1)
-shader_parameter/size = 1.05
+shader_parameter/size = 1.07999999821184
 
 [resource]
 next_pass = SubResource("ShaderMaterial_mkqn6")

@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var movement_direction = Vector3(0,0,1)
-var speed = 280
+@export var speed = 0
 var movement_rotation = 0
 var input_disabled = false
 

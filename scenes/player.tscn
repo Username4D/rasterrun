@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bl7uumbime3mk"]
+[gd_scene load_steps=6 format=3 uid="uid://bl7uumbime3mk"]
 
 [ext_resource type="Script" uid="uid://cra6mwlhwevg5" path="res://scripts/player.gd" id="1_3vyb7"]
 
@@ -13,30 +13,6 @@ emission = Color(0.21568628, 1, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g2els"]
 size = Vector3(1.05, 0.95, 1.05)
-
-[sub_resource type="Curve" id="Curve_qhqgy"]
-_limits = [0.0, 3.0, 0.0, 1.0]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.86363643, 0.6741574), -1.4353043, -1.4353043, 0, 0, Vector2(1, 0), -3.6404498, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_dqkch"]
-width = 1024
-curve = SubResource("Curve_qhqgy")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qlg0r"]
-emission_shape_scale = Vector3(60, 1, 80)
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-gravity = Vector3(0, 4, 0)
-scale_over_velocity_max = 16.0
-scale_over_velocity_curve = SubResource("CurveTexture_dqkch")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2els"]
-albedo_color = Color(0.8249593, 1, 1, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_smehm"]
-material = SubResource("StandardMaterial3D_g2els")
-size = Vector3(0.2, 0.2, 0.2)
 
 [node name="player" type="CharacterBody3D" groups=["player"]]
 platform_on_leave = 2
@@ -58,14 +34,6 @@ shape = SubResource("BoxShape3D_g2els")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.91855675, 0.25022972, -0.30600417, -2.5229978e-08, 0.77412754, 0.6330297, 0.3952891, 0.58147377, -0.7110801, -3.329, 6.6, -8)
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
-amount = 250
-amount_ratio = 0.25
-lifetime = 4.0
-process_material = SubResource("ParticleProcessMaterial_qlg0r")
-draw_pass_1 = SubResource("BoxMesh_smehm")
 
 [connection signal="area_entered" from="front" to="." method="_on_front_area_entered"]
 [connection signal="body_entered" from="front" to="." method="_on_front_body_entered"]
