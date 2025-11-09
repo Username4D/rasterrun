@@ -17,3 +17,6 @@ func _on_settings_pressed() -> void:
 func _on_credits_pressed() -> void:
 	self.get_parent().add_child(load("res://scenes/credits.tscn").instantiate())
 	self.queue_free()
+
+func _ready() -> void:
+	$Label2.text = "PB: " + var_to_str(save_handler.pb)

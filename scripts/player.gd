@@ -31,6 +31,7 @@ func _physics_process(delta: float) -> void:
 	self.move_and_slide()
 	
 	if position.y <= 0.98:
+		save_handler.save()
 		print("too_low")
 		input_disabled = true
 		$Camera3D.global_position.y = 6.6 + 1
@@ -40,9 +41,11 @@ func _on_front_body_entered(body: Node3D) -> void:
 	if body.is_in_group("collidable"):
 		print(body.name)
 		self.speed = 0
+		save_handler.save()
 
 
 func _on_front_area_entered(area: Area3D) -> void:
 	if area.is_in_group("collidable"):
 		print(area.name)
 		self.speed = 0
+		save_handler.save()

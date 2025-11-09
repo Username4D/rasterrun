@@ -13,3 +13,7 @@ func _ready() -> void:
 		$AudioStreamPlayer.queue_free()
 	else:
 		$AudioStreamPlayer.play()
+
+func _process(delta: float) -> void:
+	if save_handler.pb < score:
+		save_handler.pb = score
