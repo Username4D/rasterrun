@@ -10,7 +10,8 @@ func _input(event: InputEvent) -> void:
 		self.queue_free()
 
 func _on_settings_pressed() -> void:
-	pass # Replace with function body.
+	self.get_parent().add_child(load("res://scenes/settings.tscn").instantiate())
+	self.queue_free()
 
 
 func _on_credits_pressed() -> void:

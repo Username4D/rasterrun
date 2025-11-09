@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://7tf7c83m3jeo"]
+[gd_scene load_steps=7 format=3 uid="uid://7tf7c83m3jeo"]
 
 [ext_resource type="Script" uid="uid://24agnd8ra1c0" path="res://scripts/settings.gd" id="1_5p8wc"]
 
@@ -10,6 +10,10 @@ font_color = Color(0.70533085, 0.99723107, 0.99999994, 1)
 bg_color = Color(0.79655224, 0.9722362, 1, 0.18300001)
 
 [sub_resource type="LabelSettings" id="LabelSettings_r6d6q"]
+font_color = Color(0.70533085, 0.99723107, 0.99999994, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6wm04"]
+font_size = 8
 font_color = Color(0.70533085, 0.99723107, 0.99999994, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5p8wc"]
@@ -57,6 +61,16 @@ offset_right = 576.0
 offset_bottom = 320.0
 text = "Shaders enabled:"
 label_settings = SubResource("LabelSettings_r6d6q")
+vertical_alignment = 1
+
+[node name="setting_name4" type="Label" parent="."]
+offset_left = 224.0
+offset_top = 384.0
+offset_right = 928.0
+offset_bottom = 416.0
+text = "(restart for changes to apply)"
+label_settings = SubResource("LabelSettings_6wm04")
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="shaders" type="CheckBox" parent="."]
