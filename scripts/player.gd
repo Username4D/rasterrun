@@ -21,6 +21,7 @@ func _input(event: InputEvent) -> void:
 	
 	$front.rotation_degrees.y = movement_rotation + 90
 func _physics_process(delta: float) -> void:
+	print($Camera3D.global_position.y)
 	if not input_disabled:
 		velocity = movement_direction * speed * delta
 	else:
@@ -32,7 +33,7 @@ func _physics_process(delta: float) -> void:
 	if position.y <= 0.98:
 		print("too_low")
 		input_disabled = true
-		$Camera3D.global_position.y = 6.6 + 0.5
+		$Camera3D.global_position.y = 6.6 + 1
 
 	
 func _on_front_body_entered(body: Node3D) -> void:

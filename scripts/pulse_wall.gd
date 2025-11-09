@@ -1,4 +1,4 @@
-extends AnimatableBody3D
+extends Area3D
 
 @export var offset = 0.0
 @onready var original_pos = self.position.y

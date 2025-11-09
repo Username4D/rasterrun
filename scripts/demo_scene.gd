@@ -5,3 +5,8 @@ extends Node3D
 func start():
 	$player.speed = 340
 	$ui.visible = true
+
+func _ready() -> void:
+	$WorldEnvironment.environment.fog_enabled = save_handler.fog_enabled
+	$WorldEnvironment.environment.glow_enabled = save_handler.glow_enabled
+	

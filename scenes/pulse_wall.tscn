@@ -8,8 +8,7 @@ size = Vector3(0.9, 1, 0.9)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ry18k"]
 
-[node name="pulse_wall" type="AnimatableBody3D" groups=["collidable"]]
-sync_to_physics = false
+[node name="pulse_wall" type="Area3D" groups=["collidable"]]
 script = ExtResource("1_nb0jv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

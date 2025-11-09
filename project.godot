@@ -14,6 +14,10 @@ config/name="Rasterrun"
 run/main_scene="uid://cqf1pye3c1kvl"
 config/features=PackedStringArray("4.5")
 
+[autoload]
+
+save_handler="*res://scripts/save_handler.gd"
+
 [display]
 
 window/stretch/mode="canvas_items"
