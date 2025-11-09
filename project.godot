@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Rasterrun"
-run/main_scene="uid://cqf1pye3c1kvl"
+run/main_scene="uid://cm7rm6d1yg6fn"
 config/features=PackedStringArray("4.5")
 
 [autoload]

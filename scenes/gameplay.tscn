@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm7rm6d1yg6fn"]
+
+[ext_resource type="PackedScene" uid="uid://cqf1pye3c1kvl" path="res://scenes/demo_scene.tscn" id="1_00tan"]
+[ext_resource type="AudioStream" uid="uid://dspaf26kkjckm" path="res://assets/game.ogg" id="2_l1v76"]
+
+[node name="gameplay" type="Node3D"]
+
+[node name="gameplay" parent="." instance=ExtResource("1_00tan")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_l1v76")
