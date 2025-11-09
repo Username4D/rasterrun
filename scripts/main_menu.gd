@@ -8,3 +8,10 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_up" ) or Input.is_action_just_pressed("ui_down") or Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right"):
 		self.get_parent().start()
 		self.queue_free()
+
+func _on_settings_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_credits_pressed() -> void:
+	pass # Replace with function body.

@@ -58,4 +58,42 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_l6cm7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_l6cm7")
 text = "Play"
 
+[node name="settings" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 576.0
+offset_right = 192.0
+offset_bottom = 621.0
+theme_override_colors/font_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_focus_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_pressed_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_hover_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_l6cm7")
+text = "Settings"
+
+[node name="credits" type="Button" parent="."]
+offset_left = 960.0
+offset_top = 576.0
+offset_right = 1120.0
+offset_bottom = 621.0
+theme_override_colors/font_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_focus_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_pressed_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_hover_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_l6cm7")
+text = "Credits"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
