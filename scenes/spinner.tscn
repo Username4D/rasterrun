@@ -4,12 +4,13 @@
 [ext_resource type="Material" uid="uid://pd5qgs33haie" path="res://resources/blue_wall.tres" id="2_78gc6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_78gc6"]
-size = Vector3(2, 0.25, 9)
+size = Vector3(3, 0.25, 9)
 
 [sub_resource type="BoxMesh" id="BoxMesh_kry60"]
-size = Vector3(2, 0.25, 9)
+size = Vector3(3, 0.25, 9)
 
 [node name="spinner" type="AnimatableBody3D"]
+sync_to_physics = false
 script = ExtResource("1_i3bsr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -22,5 +23,5 @@ mesh = SubResource("BoxMesh_kry60")
 surface_material_override/0 = ExtResource("2_78gc6")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 6.0
 autostart = true

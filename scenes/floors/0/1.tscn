@@ -1,0 +1,306 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqokw1notn5hw"]
+
+[ext_resource type="PackedScene" uid="uid://cqniu86ehuq6y" path="res://scenes/floor.tscn" id="1_2u5rs"]
+[ext_resource type="PackedScene" uid="uid://b77hpbyp824ng" path="res://scenes/spinner.tscn" id="2_eetfa"]
+
+[node name="floor" instance=ExtResource("1_2u5rs")]
+
+[node name="floor_tile" parent="wall" index="0"]
+visible = false
+
+[node name="floor_tile2" parent="wall" index="1"]
+visible = false
+
+[node name="floor_tile3" parent="wall" index="2"]
+visible = false
+
+[node name="floor_tile4" parent="wall" index="3"]
+visible = false
+
+[node name="floor_tile5" parent="wall" index="4"]
+visible = false
+
+[node name="floor_tile7" parent="wall" index="6"]
+visible = false
+
+[node name="floor_tile8" parent="wall" index="7"]
+visible = false
+
+[node name="floor_tile9" parent="wall" index="8"]
+visible = false
+
+[node name="floor_tile10" parent="wall" index="9"]
+visible = false
+
+[node name="floor_tile12" parent="wall" index="11"]
+visible = false
+
+[node name="floor_tile13" parent="wall" index="12"]
+visible = false
+
+[node name="floor_tile14" parent="wall" index="13"]
+visible = false
+
+[node name="floor_tile15" parent="wall" index="14"]
+visible = false
+
+[node name="floor_tile16" parent="wall" index="15"]
+visible = false
+
+[node name="floor_tile18" parent="wall" index="17"]
+visible = false
+
+[node name="floor_tile19" parent="wall" index="18"]
+visible = false
+
+[node name="floor_tile20" parent="wall" index="19"]
+visible = false
+
+[node name="floor_tile21" parent="wall" index="20"]
+visible = false
+
+[node name="floor_tile23" parent="wall" index="22"]
+visible = false
+
+[node name="floor_tile24" parent="wall" index="23"]
+visible = false
+
+[node name="floor_tile25" parent="wall" index="24"]
+visible = false
+
+[node name="floor_tile26" parent="wall" index="25"]
+visible = false
+
+[node name="floor_tile27" parent="wall" index="26"]
+visible = false
+
+[node name="floor_tile29" parent="wall" index="28"]
+visible = false
+
+[node name="floor_tile30" parent="wall" index="29"]
+visible = false
+
+[node name="floor_tile31" parent="wall" index="30"]
+visible = false
+
+[node name="floor_tile32" parent="wall" index="31"]
+visible = false
+
+[node name="floor_tile34" parent="wall" index="33"]
+visible = false
+
+[node name="floor_tile35" parent="wall" index="34"]
+visible = false
+
+[node name="floor_tile36" parent="wall" index="35"]
+visible = false
+
+[node name="floor_tile37" parent="wall" index="36"]
+visible = false
+
+[node name="floor_tile38" parent="wall" index="37"]
+visible = false
+
+[node name="floor_tile40" parent="wall" index="39"]
+visible = false
+
+[node name="floor_tile41" parent="wall" index="40"]
+visible = false
+
+[node name="floor_tile42" parent="wall" index="41"]
+visible = false
+
+[node name="floor_tile43" parent="wall" index="42"]
+visible = false
+
+[node name="floor_tile45" parent="wall" index="44"]
+visible = false
+
+[node name="floor_tile46" parent="wall" index="45"]
+visible = false
+
+[node name="floor_tile47" parent="wall" index="46"]
+visible = false
+
+[node name="floor_tile48" parent="wall" index="47"]
+visible = false
+
+[node name="floor_tile49" parent="wall" index="48"]
+visible = false
+
+[node name="floor_tile51" parent="wall" index="50"]
+visible = false
+
+[node name="floor_tile52" parent="wall" index="51"]
+visible = false
+
+[node name="floor_tile53" parent="wall" index="52"]
+visible = false
+
+[node name="floor_tile54" parent="wall" index="53"]
+visible = false
+
+[node name="floor_tile56" parent="wall" index="55"]
+visible = false
+
+[node name="floor_tile57" parent="wall" index="56"]
+visible = false
+
+[node name="floor_tile58" parent="wall" index="57"]
+visible = false
+
+[node name="floor_tile59" parent="wall" index="58"]
+visible = false
+
+[node name="floor_tile60" parent="wall" index="59"]
+visible = false
+
+[node name="floor_tile62" parent="wall" index="61"]
+visible = false
+
+[node name="floor_tile63" parent="wall" index="62"]
+visible = false
+
+[node name="floor_tile64" parent="wall" index="63"]
+visible = false
+
+[node name="floor_tile65" parent="wall" index="64"]
+visible = false
+
+[node name="floor_tile67" parent="wall" index="66"]
+visible = false
+
+[node name="floor_tile68" parent="wall" index="67"]
+visible = false
+
+[node name="floor_tile69" parent="wall" index="68"]
+visible = false
+
+[node name="floor_tile70" parent="wall" index="69"]
+visible = false
+
+[node name="floor_tile71" parent="wall" index="70"]
+visible = false
+
+[node name="floor_tile73" parent="wall" index="72"]
+visible = false
+
+[node name="floor_tile74" parent="wall" index="73"]
+visible = false
+
+[node name="floor_tile75" parent="wall" index="74"]
+visible = false
+
+[node name="floor_tile76" parent="wall" index="75"]
+visible = false
+
+[node name="floor_tile78" parent="wall" index="77"]
+visible = false
+
+[node name="floor_tile79" parent="wall" index="78"]
+visible = false
+
+[node name="floor_tile80" parent="wall" index="79"]
+visible = false
+
+[node name="floor_tile81" parent="wall" index="80"]
+visible = false
+
+[node name="floor_tile82" parent="wall" index="81"]
+visible = false
+
+[node name="floor_tile84" parent="wall" index="83"]
+visible = false
+
+[node name="floor_tile85" parent="wall" index="84"]
+visible = false
+
+[node name="floor_tile86" parent="wall" index="85"]
+visible = false
+
+[node name="floor_tile87" parent="wall" index="86"]
+visible = false
+
+[node name="floor_tile89" parent="wall" index="88"]
+visible = false
+
+[node name="floor_tile90" parent="wall" index="89"]
+visible = false
+
+[node name="floor_tile91" parent="wall" index="90"]
+visible = false
+
+[node name="floor_tile92" parent="wall" index="91"]
+visible = false
+
+[node name="floor_tile93" parent="wall" index="92"]
+visible = false
+
+[node name="floor_tile95" parent="wall" index="94"]
+visible = false
+
+[node name="floor_tile96" parent="wall" index="95"]
+visible = false
+
+[node name="floor_tile97" parent="wall" index="96"]
+visible = false
+
+[node name="floor_tile98" parent="wall" index="97"]
+visible = false
+
+[node name="floor_tile100" parent="wall" index="99"]
+visible = false
+
+[node name="floor_tile101" parent="wall" index="100"]
+visible = false
+
+[node name="floor_tile102" parent="wall" index="101"]
+visible = false
+
+[node name="floor_tile103" parent="wall" index="102"]
+visible = false
+
+[node name="floor_tile104" parent="wall" index="103"]
+visible = false
+
+[node name="floor_tile106" parent="wall" index="105"]
+visible = false
+
+[node name="floor_tile107" parent="wall" index="106"]
+visible = false
+
+[node name="floor_tile108" parent="wall" index="107"]
+visible = false
+
+[node name="floor_tile109" parent="wall" index="108"]
+visible = false
+
+[node name="floor_tile111" parent="wall" index="110"]
+visible = false
+
+[node name="floor_tile112" parent="wall" index="111"]
+visible = false
+
+[node name="floor_tile113" parent="wall" index="112"]
+visible = false
+
+[node name="floor_tile114" parent="wall" index="113"]
+visible = false
+
+[node name="floor_tile115" parent="wall" index="114"]
+visible = false
+
+[node name="floor_tile117" parent="wall" index="116"]
+visible = false
+
+[node name="floor_tile118" parent="wall" index="117"]
+visible = false
+
+[node name="floor_tile119" parent="wall" index="118"]
+visible = false
+
+[node name="floor_tile120" parent="wall" index="119"]
+visible = false
+
+[node name="spinner" parent="." index="4" instance=ExtResource("2_eetfa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)

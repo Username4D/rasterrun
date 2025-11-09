@@ -14,3 +14,7 @@ func _on_player_detection_body_exited(body: Node3D) -> void:
 			
 func ease_in_out_quint(x):
 	return 16 * x * x * x * x * x if x < 0.5 else 1 - pow(-2 * x + 2, 5) / 2
+
+func _ready() -> void:
+	if not self.visible:
+		self.queue_free() 
