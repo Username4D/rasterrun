@@ -35,6 +35,7 @@ func _physics_process(delta: float) -> void:
 		print("too_low")
 		input_disabled = true
 		$Camera3D.global_position.y = 6.6 + 1
+		self.get_parent().death()
 
 	
 func _on_front_body_entered(body: Node3D) -> void:
@@ -42,6 +43,7 @@ func _on_front_body_entered(body: Node3D) -> void:
 		print(body.name)
 		self.speed = 0
 		save_handler.save()
+		self.get_parent().death()
 
 
 func _on_front_area_entered(area: Area3D) -> void:
@@ -49,3 +51,4 @@ func _on_front_area_entered(area: Area3D) -> void:
 		print(area.name)
 		self.speed = 0
 		save_handler.save()
+		self.get_parent().death()
