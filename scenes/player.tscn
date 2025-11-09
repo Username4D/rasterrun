@@ -12,7 +12,7 @@ emission = Color(0.21568628, 1, 1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_3vyb7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g2els"]
-size = Vector3(1.05, 0.98, 1.05)
+size = Vector3(1.05, 0.95, 1.05)
 
 [node name="player" type="CharacterBody3D" groups=["player"]]
 platform_on_leave = 2
@@ -33,7 +33,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.018969655)
 shape = SubResource("BoxShape3D_g2els")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.9238795, 0.14644665, -0.3535534, 0, 0.9238795, 0.38268346, 0.3826835, 0.3535534, -0.85355335, -4, 4, -8)
+transform = Transform3D(-0.91855675, 0.25022972, -0.30600417, -2.5229978e-08, 0.77412754, 0.6330297, 0.3952891, 0.58147377, -0.7110801, -3.329, 6.6, -8)
 
 [connection signal="area_entered" from="front" to="." method="_on_front_area_entered"]
 [connection signal="body_entered" from="front" to="." method="_on_front_body_entered"]

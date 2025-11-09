@@ -16,6 +16,7 @@ size = Vector3(0.25, 1, 5)
 height = 1.0
 
 [node name="spinner" type="AnimatableBody3D" groups=["collidable"]]
+sync_to_physics = false
 script = ExtResource("1_tpvwv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -37,5 +38,5 @@ mesh = SubResource("CylinderMesh_v6n2a")
 surface_material_override/0 = ExtResource("2_v6n2a")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 6.0
 autostart = true

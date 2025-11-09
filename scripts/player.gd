@@ -32,7 +32,7 @@ func _physics_process(delta: float) -> void:
 	if position.y <= 0.98:
 		print("too_low")
 		input_disabled = true
-		$Camera3D.global_position.y = 5
+		$Camera3D.global_position.y = 6.6 + 0.5
 
 	
 func _on_front_body_entered(body: Node3D) -> void:
