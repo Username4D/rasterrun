@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dryq3e5pfi7rt"]
+
+[ext_resource type="Script" uid="uid://d3kk064ix68qg" path="res://scripts/floor_tile.gd" id="1_7e2jf"]
+[ext_resource type="PackedScene" uid="uid://ch3gpdhfoyjbm" path="res://scenes/wall.tscn" id="2_mispd"]
+[ext_resource type="PackedScene" uid="uid://clh8jtbrdus8o" path="res://scenes/spike.tscn" id="3_tphjt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7e2jf"]
+size = Vector3(0.8, 1, 0.8)
+
+[node name="floor_tile" type="Node3D"]
+script = ExtResource("1_7e2jf")
+
+[node name="wall" parent="." instance=ExtResource("2_mispd")]
+
+[node name="spike" parent="." instance=ExtResource("3_tphjt")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.25, 0)
+
+[node name="player_detection" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player_detection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_7e2jf")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_exited" from="player_detection" to="." method="_on_player_detection_body_exited"]
