@@ -4,7 +4,7 @@ var pb = 0
 var shaders_enabled = true
 var glow_enabled = true
 var fog_enabled = true
-var sound_enabled = true
+var sound_enabled = false
 
 func _ready() -> void:
 	var file = FileAccess.open("user://save.dat", FileAccess.READ)

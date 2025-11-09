@@ -11,3 +11,5 @@ func _ready() -> void:
 	$WorldEnvironment.environment.glow_enabled = save_handler.glow_enabled
 	if not save_handler.sound_enabled:
 		$AudioStreamPlayer.queue_free()
+	else:
+		$AudioStreamPlayer.play()
