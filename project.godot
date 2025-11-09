@@ -23,6 +23,11 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 collidable=""
 player=""
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+theme/default_font_generate_mipmaps=true
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

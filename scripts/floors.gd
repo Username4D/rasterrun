@@ -12,20 +12,20 @@ var current_index = 0
 
 func _ready() -> void:
 	rng.randomize()
-	await spawn_new()
-	await spawn_new()
-	await spawn_new()
+	await spawn_new(false)
+	await spawn_new(false)
+	await spawn_new(false)
 	
 func spawn_new(anim = true):
 	var possible = [mi_one, zero, one]
 	for i in self.get_children():
-		if round(last.position+ Vector3(last.next.x * -1, 0, last.next.y).rotated(Vector3 (0,01,0), last.rotation.y) * 11 + Vector3(11, 0, 0).rotated(Vector3 (0,01,0), last.rotation.y - 0.5 * PI * last.next.x)) == round(i.position):
+		if round(last.position+ Vector3(last.next.x * -1, 0, last.next.y).rotated(Vector3 (0,01,0), last.rotation.y) * 11 + Vector3(11, 0, 0).rotated(Vector3 (0,01,0), last.rotation.y - 0.5 * PI * last.next.x)) == round(i.real_pos):
 			print("no_left")
 			possible.erase(mi_one)
-		if round(last.position+ Vector3(last.next.x * -1, 0, last.next.y).rotated(Vector3 (0,01,0), last.rotation.y) * 11 + Vector3(-11, 0, 0).rotated(Vector3 (0,01,0), last.rotation.y - 0.5 * PI * last.next.x)) == round(i.position):
+		if round(last.position+ Vector3(last.next.x * -1, 0, last.next.y).rotated(Vector3 (0,01,0), last.rotation.y) * 11 + Vector3(-11, 0, 0).rotated(Vector3 (0,01,0), last.rotation.y - 0.5 * PI * last.next.x)) == round(i.real_pos):
 			print("no_right")
 			possible.erase(one)
-		if round(last.position+ Vector3(last.next.x * -1, 0, last.next.y).rotated(Vector3 (0,01,0), last.rotation.y) * 11 + Vector3(0, 00, 11).rotated(Vector3 (0,01,0), last.rotation.y- 0.5 * PI * last.next.x)) == round(i.position):
+		if round(last.position+ Vector3(last.next.x * -1, 0, last.next.y).rotated(Vector3 (0,01,0), last.rotation.y) * 11 + Vector3(0, 00, 11).rotated(Vector3 (0,01,0), last.rotation.y- 0.5 * PI * last.next.x)) == round(i.real_pos):
 			print("no_front")
 			possible.erase(zero)
 		if i.index < current_index - 5:

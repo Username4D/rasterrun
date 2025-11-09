@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqf1pye3c1kvl"]
+[gd_scene load_steps=9 format=3 uid="uid://cqf1pye3c1kvl"]
 
-[ext_resource type="PackedScene" uid="uid://cqniu86ehuq6y" path="res://scenes/floor.tscn" id="2_0ekuu"]
-[ext_resource type="Script" uid="uid://bp6r7shwy5ruv" path="res://scenes/floors.gd" id="2_8m1ix"]
+[ext_resource type="Script" uid="uid://bgyx8cj76cfrl" path="res://scripts/demo_scene.gd" id="1_bk2b3"]
+[ext_resource type="Script" uid="uid://bp6r7shwy5ruv" path="res://scripts/floors.gd" id="2_8m1ix"]
 [ext_resource type="PackedScene" uid="uid://bl7uumbime3mk" path="res://scenes/player.tscn" id="2_ba4t3"]
+[ext_resource type="PackedScene" uid="uid://oqf63acvkf2r" path="res://scenes/floors/0/0.tscn" id="3_0ekuu"]
+[ext_resource type="PackedScene" uid="uid://5myfnkux2cr0" path="res://scenes/ui.tscn" id="4_8m1ix"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ba4t3"]
 sky_top_color = Color(3.128499e-07, 0.30717537, 0.3524423, 1)
@@ -28,7 +30,8 @@ fog_light_color = Color(1.5792903e-08, 0.039755587, 0.039755557, 1)
 fog_density = 0.0
 fog_sky_affect = 0.97
 
-[node name="Node3D" type="Node3D"]
+[node name="gameplay" type="Node3D"]
+script = ExtResource("1_bk2b3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_8m1ix")
@@ -44,5 +47,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 [node name="floors" type="Node3D" parent="."]
 script = ExtResource("2_8m1ix")
 
-[node name="floor" parent="floors" instance=ExtResource("2_0ekuu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 1)
+[node name="floor" parent="floors" instance=ExtResource("3_0ekuu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="ui" parent="." instance=ExtResource("4_8m1ix")]

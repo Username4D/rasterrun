@@ -3,8 +3,10 @@ extends Node3D
 @export var next = Vector2(0,1)
 @export var index = 0
 
+@export var real_pos = Vector3(0,1,0)
+
 func _ready() -> void:
-	$exit.rotation_degrees.y = next.x * 90 - 180
+	$exit.rotation_degrees.y = next.x * 90 * -1
 	$next_floor.position.x = 11 * next.y
 	$next_floor.position.z = -11 * next.x
 	if not $wall.visible:
@@ -13,6 +15,7 @@ func _ready() -> void:
 func _on_exit_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		self.get_parent().spawn_new()
+		self.get_parent().get_parent().score += 1
 		$exit.queue_free()
 
 func ease_in_out_quint(x):
@@ -35,3 +38,6 @@ func despawn():
 		self.scale = Vector3(0.01,0.01,0.01) + ease_in_out_quint($Timer.time_left / 2) * Vector3(.99,.99,.99)
 		await get_tree().process_frame
 	self.queue_free()
+
+func _process(delta: float) -> void:
+	real_pos = Vector3(self.position.x, 0.5, self.position.z)

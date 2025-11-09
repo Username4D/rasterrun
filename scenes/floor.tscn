@@ -1,10 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqniu86ehuq6y"]
+[gd_scene load_steps=6 format=3 uid="uid://cqniu86ehuq6y"]
 
 [ext_resource type="Script" uid="uid://s4u2jic5pqui" path="res://scripts/floor.gd" id="1_kuqtn"]
 [ext_resource type="PackedScene" uid="uid://ch3gpdhfoyjbm" path="res://scenes/wall.tscn" id="1_ukw5w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_whr1e"]
 size = Vector3(11, 1, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kuqtn"]
+size = Vector3(11, 0.5, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whr1e"]
+transparency = 1
+albedo_color = Color(0.4834036, 1, 1, 0.155)
+emission_enabled = true
+emission = Color(0.5642541, 0.9999997, 0.9862445, 1)
+emission_energy_multiplier = 3.2
+emission_operator = 1
 
 [node name="floor" type="Node3D"]
 script = ExtResource("1_kuqtn")
@@ -18,8 +29,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
 [node name="exit" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="exit"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 shape = SubResource("BoxShape3D_whr1e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="exit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 5)
+mesh = SubResource("BoxMesh_kuqtn")
+surface_material_override/0 = SubResource("StandardMaterial3D_whr1e")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
