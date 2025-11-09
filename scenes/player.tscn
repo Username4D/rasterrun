@@ -33,4 +33,5 @@ shape = SubResource("BoxShape3D_g2els")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.9238795, 0.14644665, -0.3535534, 0, 0.9238795, 0.38268346, 0.3826835, 0.3535534, -0.85355335, -4, 4, -8)
 
+[connection signal="area_entered" from="front" to="." method="_on_front_area_entered"]
 [connection signal="body_entered" from="front" to="." method="_on_front_body_entered"]

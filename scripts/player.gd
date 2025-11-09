@@ -39,3 +39,9 @@ func _on_front_body_entered(body: Node3D) -> void:
 	if body.is_in_group("collidable"):
 		print(body.name)
 		self.speed = 0
+
+
+func _on_front_area_entered(area: Area3D) -> void:
+	if area.is_in_group("collidable"):
+		print(area.name)
+		self.speed = 0
