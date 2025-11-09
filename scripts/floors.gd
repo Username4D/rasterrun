@@ -2,9 +2,9 @@ extends Node3D
 
 @onready var last = self.get_child(0)
 
-var mi_one = [preload("res://scenes/floors/-1/0.tscn")]
+var mi_one = [preload("res://scenes/floors/-1/0.tscn"), preload("res://scenes/floors/-1/1.tscn")]
 var zero = [preload("res://scenes/floors/0/0.tscn"), preload("res://scenes/floors/0/1.tscn")]
-var one = [preload("res://scenes/floors/1/0.tscn")]
+var one = [preload("res://scenes/floors/1/0.tscn"), preload("res://scenes/floors/1/1.tscn")]
 
 var rng = RandomNumberGenerator.new()
 
