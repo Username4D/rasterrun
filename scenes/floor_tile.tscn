@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://clh8jtbrdus8o" path="res://scenes/spike.tscn" id="3_tphjt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7e2jf"]
-size = Vector3(0.8, 1, 0.8)
+size = Vector3(0.5, 1, 0.5)
 
 [node name="floor_tile" type="Node3D"]
 script = ExtResource("1_7e2jf")
