@@ -65,9 +65,9 @@ vertical_alignment = 1
 
 [node name="setting_name4" type="Label" parent="."]
 offset_left = 224.0
-offset_top = 384.0
+offset_top = 416.0
 offset_right = 928.0
-offset_bottom = 416.0
+offset_bottom = 448.0
 text = "(restart for changes to apply)"
 label_settings = SubResource("LabelSettings_6wm04")
 horizontal_alignment = 1
@@ -109,6 +109,15 @@ text = "Fog enabled:"
 label_settings = SubResource("LabelSettings_r6d6q")
 vertical_alignment = 1
 
+[node name="setting_name5" type="Label" parent="."]
+offset_left = 416.0
+offset_top = 384.0
+offset_right = 576.0
+offset_bottom = 416.0
+text = "Sound enabled:"
+label_settings = SubResource("LabelSettings_r6d6q")
+vertical_alignment = 1
+
 [node name="fog" type="CheckBox" parent="."]
 modulate = Color(0.009852052, 18.224731, 18.452145, 1)
 offset_left = 704.0
@@ -118,7 +127,17 @@ offset_bottom = 384.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5p8wc")
 icon_alignment = 2
 
+[node name="sound" type="CheckBox" parent="."]
+modulate = Color(0.009852052, 18.224731, 18.452145, 1)
+offset_left = 704.0
+offset_top = 384.0
+offset_right = 736.0
+offset_bottom = 416.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5p8wc")
+icon_alignment = 2
+
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="shaders" to="." method="update"]
 [connection signal="pressed" from="glow" to="." method="update"]
 [connection signal="pressed" from="fog" to="." method="update"]
+[connection signal="pressed" from="sound" to="." method="update"]
