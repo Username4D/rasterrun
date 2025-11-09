@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://om14pg06hwok"]
+
+[ext_resource type="Script" uid="uid://caafv2wipkeq7" path="res://scripts/credits.gd" id="1_0bpdh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5p8wc"]
+font_size = 66
+font_color = Color(0.70533085, 0.99723107, 0.99999994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6cm7"]
+bg_color = Color(0.79655224, 0.9722362, 1, 0.18300001)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r6d6q"]
+font_color = Color(0.70533085, 0.99723107, 0.99999994, 1)
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_0bpdh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 224.0
+offset_top = 96.0
+offset_right = 928.0
+offset_bottom = 544.0
+color = Color(0, 0, 0, 0.47500002)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 384.0
+text = "Credits"
+label_settings = SubResource("LabelSettings_5p8wc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="settings" type="Button" parent="."]
+offset_left = 480.0
+offset_top = 480.0
+offset_right = 672.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_focus_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_pressed_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_hover_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.7457072, 0.9138857, 0.90965456, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_l6cm7")
+text = "back"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 224.0
+offset_top = 192.0
+offset_right = 928.0
+offset_bottom = 480.0
+text = "Godot Engine: https://godotengine.org/license/"
+label_settings = SubResource("LabelSettings_r6d6q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
